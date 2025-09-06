@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import ScrollingText from "./components/ScrollingText";
 import Slider from "./components/Slider";
 import Dom from "./components/Dom";
-import Combo from './components/combo';
+import Combo from './components/Combo';
 import Dom1 from "./components/Dom1";
 import Dom2 from "./components/Dom2";
 import Publisher from "./components/Publisher";
