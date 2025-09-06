@@ -1,0 +1,38 @@
+.publisher-container {
+  padding: 30px;
+  background-color: #000; /* nền đen */
+  color: #fff;
+}
+
+.publisher-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.publisher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+.publisher-card {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publisher-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.publisher-card img:hover {
+  transform: scale(1.1);
+}

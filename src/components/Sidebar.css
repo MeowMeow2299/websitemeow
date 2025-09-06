@@ -1,0 +1,88 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.menu ul,
+.popular-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li,
+.popular-section li {
+  padding: 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu li:hover,
+.popular-section li:hover {
+  color: #00ffff;
+}
+
+.active {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.highlight-yellow {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.popular-section {
+  margin-top: 30px;
+}
+
+.popular-section h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}

@@ -1,0 +1,29 @@
+.combo-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a; /* nền đen */
+  padding: 20px 0;
+  gap: 50px; /* khoảng cách giữa các icon */
+}
+
+.combo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.combo-icon {
+  font-size: 36px; /* kích thước icon */
+  margin-bottom: 8px;
+}
+
+.combo-item:hover {
+  transform: scale(1.1);
+  color: #1e90ff; /* màu khi hover */
+}
