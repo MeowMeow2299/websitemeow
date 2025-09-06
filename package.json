@@ -1,10 +1,9 @@
 {
-  "homepage": "https://MeowMeow2299.github.io/websitemeow",
   "name": "website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+"homepage": "https://MeowMeow2299.github.io/websitemeow",  "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
