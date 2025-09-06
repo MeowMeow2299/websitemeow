@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="logo-section">
-          <img src="./LOGO.png" alt="Logo" />
+          <img src="/LOGO.png" alt="Logo" />
           <p className="tagline">
             A GAME STUDIO CRAFTING EXCITING, HIGH-QUALITY VIDEO GAMES, PRIORITIZING IMMERSIVE GAMEPLAY AND MECHANICS. HAC HEATBASE PLATEA
           </p>
