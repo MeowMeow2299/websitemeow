@@ -181,6 +181,16 @@ async function main() {
 
   await fs.writeFile(path.join(externalDir, 'downloads.json'), JSON.stringify(downloads, null, 2));
 
+  // Snapshot page HTML for embedding (approximate look-only, no scripts)
+  try {
+    let html = await page.content();
+    // Neutralize script tags to avoid execution inside our app
+    html = html.replace(/<script(\s|>)/gi, '<script type="text/blocked"$1');
+    await fs.writeFile(path.join(externalDir, 'page.html'), html, 'utf8');
+  } catch (e) {
+    console.warn('Snapshot page failed:', e.message);
+  }
+
   // Simple selection logic
   const nonSvg = downloads.filter(d => !d.file.toLowerCase().endsWith('.svg'));
   const sorted = [...nonSvg].sort((a, b) => b.bytes - a.bytes);

@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Register from "./components/Register";
+import ContentSnapshot from "./components/ContentSnapshot";
 
 
 function App() {
@@ -90,6 +91,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/snapshot" element={<ContentSnapshot />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           </div>
