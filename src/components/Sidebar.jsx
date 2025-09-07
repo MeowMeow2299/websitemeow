@@ -16,34 +16,34 @@ const Sidebar = () => {
       <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
         <nav className="menu">
           <ul>
-            <li>
+            <li className="primary">
               <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/casino" className={({ isActive }) => isActive ? 'active' : ''}>Casino Games</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/slots" className={({ isActive }) => isActive ? 'active' : ''}>Slots</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/live" className={({ isActive }) => isActive ? 'active' : ''}>Live Casino</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/table" className={({ isActive }) => isActive ? 'active' : ''}>Table Games</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/lottery" className={({ isActive }) => isActive ? 'active' : ''}>Lottery</NavLink>
             </li>
-            <li>
+            <li className="primary">
               <NavLink to="/sports" className={({ isActive }) => isActive ? 'active' : ''}>Sports</NavLink>
             </li>
-            <li className="highlight-blue">Gamechicken</li>
-            <li className="highlight-yellow">E-Sport</li>
+            <li className="primary">Gamechicken</li>
+            <li className="primary">E-Sport</li>
           </ul>
         </nav>
 
         <div className="popular-section">
-          <h4>Popular Games</h4>
+          <h4 className="primary-title">Popular Games</h4>
           <ul>
             <li>BGD33</li>
             <li>BETBDT</li>
