@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const [logoSrc, setLogoSrc] = useState('/photos/logo.png');
   return (
     <header className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
           <h1 className="logo">
             <NavLink to="/" aria-label="Home">
-              <img src={logoSrc} onError={() => setLogoSrc('/LOGO.png')} alt="Logo" />
+              <img src="/photos/logo.png" alt="Logo" />
             </NavLink>
           </h1>
         </div>
