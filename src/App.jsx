@@ -45,31 +45,31 @@ function App() {
                       objectFit: 'contain'
                     }}
                   />
-                  <div className="bg-[#1a1a1a] min-h-screen p-4">
+                  <div className="bg-[#1a1a1a] min-h-screen p-4 fade-in">
                     <ScrollingText />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Slider />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Combo />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Dom />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Dom1 />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Dom2 />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Publisher />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Support />
                   </div>
-                  <div>
+                  <div className="fade-in">
                     <Footer />
                   </div>
                 </>
