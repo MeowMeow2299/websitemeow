@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "fetch:images": "node scripts/fetch-images.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -27,6 +28,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "puppeteer": "^22.13.1",
     "tailwindcss": "^4.1.13",
     "vite": "^7.1.2"
   }
