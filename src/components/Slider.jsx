@@ -1,19 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./Slider.css";
 
-const images = [
-  { id: 1, title: "STARBURST 5", url: "/2.png" },
-  { id: 2, title: "STARBURST 4", url: "/2.png" },
-  { id: 3, title: "STARBURST 3", url: "/2.png" },
-  { id: 4, title: "STARBURST 2", url: "/2.png" },
-  { id: 5, title: "STARBURST 8", url: "/2.png" },
-  { id: 6, title: "STARBURST 6", url: "/2.png" },
-    { id: 7, title: "STARBURST 7", url: "/2.png" },
-    { id: 8, title: "STARBURST 1", url: "/2.png" },
-];
+function useScrapedImages() {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    fetch('/external/downloads.json')
+      .then(r => r.json())
+      .then(list => {
+        const slideCandidates = list.filter(it => /\.(png|jpe?g|webp|gif|avif)$/i.test(it.file));
+        // Prefer medium sized files for thumbnails
+        const sorted = [...slideCandidates].sort((a, b) => a.bytes - b.bytes);
+        const unique = [];
+        const seen = new Set();
+        for (const it of sorted) {
+          if (seen.has(it.file)) continue;
+          seen.add(it.file);
+          unique.push({ id: seen.size, title: it.file.split('/').pop().split('.')[0], url: `/${it.file}` });
+          if (unique.length >= 24) break; // cap to 24 distinct items
+        }
+        setItems(unique);
+      })
+      .catch(() => setItems([]));
+  }, []);
+  return items;
+}
 
 const Slider = () => {
   const sliderRef = useRef(null);
+  const images = useScrapedImages();
 
   useEffect(() => {
     const slider = sliderRef.current;

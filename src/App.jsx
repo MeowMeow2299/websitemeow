@@ -28,6 +28,7 @@ function App() {
 
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
+          <div className="main-content-scaled">
           <Routes>
             <Route
               path="/"
@@ -91,6 +92,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </div>
         </div>
       </div>
     </div>
