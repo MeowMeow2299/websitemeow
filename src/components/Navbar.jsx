@@ -13,13 +13,13 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center">
-          <p className="slogan">Bet Smart, Win More.</p>
+          <p className="slogan">Bet Smart Win More</p>
         </div>
 
         <div className="navbar-right">
           <div className="search-bar">
-            <input type="text" placeholder="Search..." />
             <i className="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
           </div>
           <div className="auth-actions">
             <NavLink className="btn-auth" to="/login">Login</NavLink>
