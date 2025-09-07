@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <g id="tickettask_btn_close_normal" transform="translate(-652 -52)">
+    <g id="Group_639" data-name="Group 639" transform="translate(610)">
+      <g id="Ellipse_21" data-name="Ellipse 21" transform="translate(42 52)" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="28" cy="28" r="28" stroke="none"/>
+        <circle cx="28" cy="28" r="26" fill="none"/>
+      </g>
+      <g id="Group_642" data-name="Group 642" transform="translate(-674.48 -54)">
+        <g id="Group_637" data-name="Group 637" transform="translate(731.51 121.069)">
+          <rect id="Rectangle_280" data-name="Rectangle 280" width="4.585" height="32.098" rx="2.293" transform="translate(22.697 0) rotate(45)" fill="#fff"/>
+          <rect id="Rectangle_281" data-name="Rectangle 281" width="4.585" height="32.098" rx="2.293" transform="translate(25.939 22.697) rotate(135)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
