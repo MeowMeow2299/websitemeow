@@ -1,10 +1,48 @@
 .auth-wrapper {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
   padding: 24px;
+  overflow: hidden;
+}
+
+/* Background image + glossy blur layer */
+.auth-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(0.6) saturate(1.15);
+  transform: scale(1.04);
+}
+
+/* Subtle glossy streak overlay */
+.auth-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 35%,
+    rgba(255,255,255,0.09) 36%,
+    rgba(255,255,255,0.02) 65%,
+    rgba(255,255,255,0.06) 100%
+  );
+  pointer-events: none;
+}
+
+/* Use different themed images for Login / SignUp */
+.login-bg::before {
+  background-image: url('/2.png');
+}
+
+.signup-bg::before {
+  background-image: url('/1.png');
 }
 
 .auth-card {
@@ -15,6 +53,8 @@
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
 }
 
 .auth-title {

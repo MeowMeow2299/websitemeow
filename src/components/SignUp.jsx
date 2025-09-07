@@ -3,7 +3,7 @@ import './Auth.css';
 
 const SignUp = () => {
   return (
-    <div className="auth-wrapper">
+    <div className="auth-wrapper signup-bg">
       <div className="auth-card">
         <h2 className="auth-title">SIGN UP</h2>
         <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
