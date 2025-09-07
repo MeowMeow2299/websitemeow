@@ -11,6 +11,8 @@ import Dom2 from "./components/Dom2";
 import Publisher from "./components/Publisher";
 import Support from "./components/Support";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 
 function App() {
@@ -82,6 +84,9 @@ function App() {
             <Route path="/favorites" element={<Slider />} />
             <Route path="/poker" element={<Dom2 />} />
             <Route path="/esports" element={<Publisher />} />
+            {/* Auth */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

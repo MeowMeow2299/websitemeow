@@ -44,6 +44,33 @@
   align-items: center;
 }
 
+.auth-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 12px;
+}
+
+.btn-auth {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-auth.primary {
+  background: linear-gradient(90deg, #FFD700, #D4AF37);
+  color: #111;
+  border: none;
+}
+
+.btn-auth:hover {
+  filter: brightness(1.05);
+}
+
 .search-bar {
   display: flex;
   align-items: center;

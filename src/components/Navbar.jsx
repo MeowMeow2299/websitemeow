@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -19,6 +20,10 @@ const Navbar = () => {
           <div className="search-bar">
             <input type="text" placeholder="Search..." />
             <i className="fas fa-search"></i>
+          </div>
+          <div className="auth-actions">
+            <NavLink className="btn-auth" to="/login">Login</NavLink>
+            <NavLink className="btn-auth primary" to="/signup">Sign Up</NavLink>
           </div>
         </div>
       </div>
