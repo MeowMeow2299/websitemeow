@@ -15,7 +15,6 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Register from "./components/Register";
 import ContentSnapshot from "./components/ContentSnapshot";
-import ContentSnapshot from "./components/ContentSnapshot";
 
 
 function App() {
