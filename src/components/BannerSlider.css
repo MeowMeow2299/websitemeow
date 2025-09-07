@@ -1,0 +1,25 @@
+.banner-slider {
+  background: #0c0c0c;
+  padding: 10px 0;
+}
+
+.banner-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 12px;
+}
+
+.banner-track::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-item {
+  flex: 0 0 auto;
+}
+
+.banner-item img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
