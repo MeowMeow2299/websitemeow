@@ -1,29 +1,55 @@
 .scroll-container {
   width: 100%;
   overflow: hidden;
-  background: #111;
-  color: white;
+  background: #0b0b0b;
+  color: #fff;
   padding: 10px 0;
-  border: 1px solid #444;
+  border: 1px solid #333;
   border-radius: 20px;
+  position: relative;
+}
+
+/* glossy sheen overlay */
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.0) 40%,
+    rgba(255, 255, 255, 0.08) 60%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+  mix-blend-mode: screen;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 64px;
 }
 
 .scroll-text {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll 15s linear infinite;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  animation: marquee-ltr 24s linear infinite;
 }
 
 .scroll-text span {
-  margin-right: 50px;
-  font-weight: bold;
+  margin-right: 56px;
 }
 
-@keyframes scroll {
+@keyframes marquee-ltr {
   0% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
 }
