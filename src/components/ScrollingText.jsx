@@ -5,7 +5,7 @@ const ScrollingText = () => {
   return (
     <div className="scroll-container" aria-label="marquee promotional messages">
       <div className="scroll-shine" />
-      <div className="scroll-text">
+      <div className="scroll-track">
         <span>🤝 REFER A FRIEND</span>
         <span>💳 PAY TO WIN</span>
         <span>🎁 CLAIM DAILY BONUS</span>
@@ -15,7 +15,7 @@ const ScrollingText = () => {
         <span>🚀 FAST WITHDRAWALS</span>
         <span>🎉 WEEKEND JACKPOT</span>
       </div>
-      <div className="scroll-text scroll-text-dup" aria-hidden="true">
+      <div className="scroll-track scroll-track-dup" aria-hidden="true">
         <span>🤝 REFER A FRIEND</span>
         <span>💳 PAY TO WIN</span>
         <span>🎁 CLAIM DAILY BONUS</span>

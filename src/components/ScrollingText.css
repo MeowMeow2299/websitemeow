@@ -20,19 +20,40 @@
   opacity: 0.55;
 }
 
-.scroll-text {
+.scroll-container::before,
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(17,17,17,0.85) 30%, rgba(17,17,17,0.0));
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(17,17,17,0.85) 30%, rgba(17,17,17,0.0));
+}
+
+.scroll-track {
   position: relative;
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: marquee-ltr 22s linear infinite;
+  animation: marquee-ltr 24s linear infinite;
 }
 
-.scroll-text-dup {
-  animation-delay: 11s;
+.scroll-track-dup {
+  animation-delay: 12s;
 }
 
-.scroll-text span {
+.scroll-track span {
   margin-right: 48px;
   font-weight: 800;
   letter-spacing: 0.6px;
