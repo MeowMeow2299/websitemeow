@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -15,13 +16,27 @@ const Sidebar = () => {
       <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
         <nav className="menu">
           <ul>
-            <li className="active">HOME</li>
-            <li>CASINO GAMES</li>
-            <li>SLOTS</li>
-            <li>LIVE CASINO</li>
-            <li>TABLE GAMES</li>
-            <li>LOTTERY</li>
-            <li>SPORTS</li>
+            <li>
+              <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>HOME</NavLink>
+            </li>
+            <li>
+              <NavLink to="/casino" className={({ isActive }) => isActive ? 'active' : ''}>CASINO GAMES</NavLink>
+            </li>
+            <li>
+              <NavLink to="/slots" className={({ isActive }) => isActive ? 'active' : ''}>SLOTS</NavLink>
+            </li>
+            <li>
+              <NavLink to="/live" className={({ isActive }) => isActive ? 'active' : ''}>LIVE CASINO</NavLink>
+            </li>
+            <li>
+              <NavLink to="/table" className={({ isActive }) => isActive ? 'active' : ''}>TABLE GAMES</NavLink>
+            </li>
+            <li>
+              <NavLink to="/lottery" className={({ isActive }) => isActive ? 'active' : ''}>LOTTERY</NavLink>
+            </li>
+            <li>
+              <NavLink to="/sports" className={({ isActive }) => isActive ? 'active' : ''}>SPORTS</NavLink>
+            </li>
             <li className="highlight-blue">GAMECHICKEN</li>
             <li className="highlight-yellow">E-SPORT</li>
           </ul>
