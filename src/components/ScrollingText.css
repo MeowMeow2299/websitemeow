@@ -43,19 +43,27 @@
   background: linear-gradient(270deg, rgba(17,17,17,0.85) 30%, rgba(17,17,17,0.0));
 }
 
-.scroll-track {
+.scroll-stage {
   position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee-ltr 26s linear infinite;
-  will-change: transform;
+  width: 100%;
+  height: 28px;
 }
 
-.scroll-track-dup {
+.scroll-strip {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  white-space: nowrap;
+  will-change: transform;
+  animation: strip-ltr 26s linear infinite;
+}
+
+.scroll-strip-dup {
+  left: -200%;
   animation-delay: 13s;
 }
 
-.scroll-track span {
+.scroll-strip span {
   margin-right: 48px;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -64,18 +72,18 @@
   text-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 0 8px rgba(255,255,255,0.18);
 }
 
-@keyframes marquee-ltr {
+@keyframes strip-ltr {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 }
 
-@-webkit-keyframes marquee-ltr {
-  0% { -webkit-transform: translateX(-100%); }
-  100% { -webkit-transform: translateX(100%); }
+@-webkit-keyframes strip-ltr {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(200%); }
 }
 
 @keyframes shine-sweep {

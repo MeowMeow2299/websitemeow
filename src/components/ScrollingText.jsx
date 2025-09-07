@@ -5,7 +5,8 @@ const ScrollingText = () => {
   return (
     <div className="scroll-container" aria-label="marquee promotional messages">
       <div className="scroll-shine" />
-      <div className="scroll-track">
+      <div className="scroll-stage">
+        <div className="scroll-strip">
         <span>🤝 REFER A FRIEND</span>
         <span>💳 PAY TO WIN</span>
         <span>🎁 CLAIM DAILY BONUS</span>
@@ -14,8 +15,8 @@ const ScrollingText = () => {
         <span>🎯 VIP EXCLUSIVE PERKS</span>
         <span>🚀 FAST WITHDRAWALS</span>
         <span>🎉 WEEKEND JACKPOT</span>
-      </div>
-      <div className="scroll-track scroll-track-dup" aria-hidden="true">
+        </div>
+        <div className="scroll-strip scroll-strip-dup" aria-hidden="true">
         <span>🤝 REFER A FRIEND</span>
         <span>💳 PAY TO WIN</span>
         <span>🎁 CLAIM DAILY BONUS</span>
@@ -24,6 +25,7 @@ const ScrollingText = () => {
         <span>🎯 VIP EXCLUSIVE PERKS</span>
         <span>🚀 FAST WITHDRAWALS</span>
         <span>🎉 WEEKEND JACKPOT</span>
+        </div>
       </div>
     </div>
   );
