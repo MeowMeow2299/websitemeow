@@ -16,6 +16,7 @@ import SignUp from "./components/SignUp";
 import Register from "./components/Register";
 import ContentSnapshot from "./components/ContentSnapshot";
 import BannerSlider from "./components/BannerSlider";
+import ContainerSection from "./components/ContainerSection";
 
 
 function App() {
@@ -31,6 +32,12 @@ function App() {
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
           <BannerSlider />
+          <div className="mt-4">
+            <ScrollingText />
+          </div>
+          <div className="mt-4">
+            <ContainerSection imageUrl="/external/Group-26-1.png" />
+          </div>
           <Routes>
             <Route path="/" element={<ContentSnapshot />} />
             <Route path="/casino" element={<Dom />} />

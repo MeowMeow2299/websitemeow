@@ -3,11 +3,27 @@ import "./ScrollingText.css"; // import file css riêng
 
 const ScrollingText = () => {
   return (
-    <div className="scroll-container">
+    <div className="scroll-container" aria-label="marquee promotional messages">
+      <div className="scroll-shine" />
       <div className="scroll-text">
-        <span>🪙 REFER A FRIEND</span>
-        <span>🎁 WIN A HUGE BONUS!</span>
-        <span>💰 SUPER MEMBER DAY – APPRECIATION BONUS ON THE 26TH OF EVERY MONTH</span>
+        <span>🤝 REFER A FRIEND</span>
+        <span>💳 PAY TO WIN</span>
+        <span>🎁 CLAIM DAILY BONUS</span>
+        <span>⚡ INSTANT CASHBACK</span>
+        <span>🏆 LEVEL UP REWARDS</span>
+        <span>🎯 VIP EXCLUSIVE PERKS</span>
+        <span>🚀 FAST WITHDRAWALS</span>
+        <span>🎉 WEEKEND JACKPOT</span>
+      </div>
+      <div className="scroll-text scroll-text-dup" aria-hidden="true">
+        <span>🤝 REFER A FRIEND</span>
+        <span>💳 PAY TO WIN</span>
+        <span>🎁 CLAIM DAILY BONUS</span>
+        <span>⚡ INSTANT CASHBACK</span>
+        <span>🏆 LEVEL UP REWARDS</span>
+        <span>🎯 VIP EXCLUSIVE PERKS</span>
+        <span>🚀 FAST WITHDRAWALS</span>
+        <span>🎉 WEEKEND JACKPOT</span>
       </div>
     </div>
   );

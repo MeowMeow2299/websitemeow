@@ -1,6 +1,7 @@
 .banner-slider {
+  position: relative;
   background: #0c0c0c;
-  padding: 10px 0 16px;
+  padding: 10px 0 8px;
 }
 
 .banner-track {
@@ -37,11 +38,16 @@
 }
 
 .banner-pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
   display: flex;
   gap: 8px;
   justify-content: center;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 0;
+  pointer-events: none;
 }
 
 .page-btn {
@@ -55,6 +61,7 @@
   font-size: 12px;
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  pointer-events: auto;
 }
 
 .page-btn.active {
