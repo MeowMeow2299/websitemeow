@@ -55,12 +55,12 @@
   left: -100%;
   white-space: nowrap;
   will-change: transform;
-  animation: strip-ltr 26s linear infinite;
+  animation: strip-ltr 22s linear infinite;
 }
 
 .scroll-strip-dup {
   left: -200%;
-  animation-delay: 13s;
+  animation-delay: 11s;
 }
 
 .scroll-strip span {
