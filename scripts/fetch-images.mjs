@@ -110,12 +110,61 @@ async function main() {
     return out;
   });
 
-  const abs = unique(urls.map(u => absoluteUrl(u, origin))).filter(u => /\.(png|jpg|jpeg|webp|svg)(\?|#|$)/i.test(u || ''));
-  const limited = abs.slice(0, 60);
+  // Collect stylesheet URLs to parse background images too
+  const stylesheetUrls = await page.evaluate(() =>
+    Array.from(document.querySelectorAll('link[rel="stylesheet" i]'))
+      .map(l => l.href)
+      .filter(Boolean)
+  );
+
+  // Helper to download text files (like CSS)
+  async function downloadText(url) {
+    const proto = url.startsWith('https:') ? https : http;
+    return await new Promise((resolve, reject) => {
+      const req = proto.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, res => {
+        if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          downloadText(res.headers.location).then(resolve).catch(reject);
+          return;
+        }
+        if (res.statusCode !== 200) {
+          reject(new Error(`Failed ${res.statusCode} ${url}`));
+          return;
+        }
+        const chunks = [];
+        res.on('data', c => chunks.push(c));
+        res.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
+      });
+      req.on('error', reject);
+    });
+  }
+
+  // Parse CSS url(...) references for additional assets
+  const cssDir = path.join(externalDir, 'styles');
+  await ensureDir(cssDir);
+  const cssUrlsFound = [];
+  for (let i = 0; i < stylesheetUrls.length; i++) {
+    const sheetUrl = absoluteUrl(stylesheetUrls[i], origin);
+    if (!sheetUrl) continue;
+    try {
+      const css = await downloadText(sheetUrl);
+      const name = `style_${String(i).padStart(2, '0')}.css`;
+      await fs.writeFile(path.join(cssDir, name), css, 'utf8');
+      const matches = Array.from(css.matchAll(/url\(("|')?(.*?)("|')?\)/gi)).map(m => m[2]);
+      matches.forEach(u => cssUrlsFound.push(absoluteUrl(u, sheetUrl)));
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.warn('Skip CSS', sheetUrl, e.message);
+    }
+  }
+
+  const abs = unique([
+    ...urls.map(u => absoluteUrl(u, origin)),
+    ...cssUrlsFound
+  ]).filter(u => /\.(png|jpg|jpeg|webp|svg|gif|avif)(\?|#|$)/i.test(u || ''));
 
   const downloads = [];
   let idx = 0;
-  for (const u of limited) {
+  for (const u of abs) {
     const name = sanitizeFilename(u, idx++);
     const dest = path.join(externalDir, name);
     try {
@@ -151,7 +200,10 @@ async function main() {
   // Map selections to our assets
   if (biggest) await copyFromExternal(biggest.file, '1.png');
   if (second) await copyFromExternal(second.file, '2.png');
-  if (logoCandidate) await copyFromExternal(logoCandidate.file, 'LOGO.png');
+  // Preserve existing LOGO.png (Gamebuzz). Only overwrite if explicitly requested.
+  if (process.env.OVERWRITE_LOGO === '1' && logoCandidate) {
+    await copyFromExternal(logoCandidate.file, 'LOGO.png');
+  }
 
   // Replace commonly referenced icons if present
   if (second) {
