@@ -25,7 +25,7 @@ function App() {
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
           <img
-  src="./1.png"
+  src="/1.png"
   alt="Banner"
   style={{
     width: '100%',

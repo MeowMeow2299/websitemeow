@@ -1,5 +1,5 @@
 import React from "react";
-import "./combo.css";
+import "./Combo.css";
 
 const menuItems = [
   { icon: "🏠", label: "Home" },
