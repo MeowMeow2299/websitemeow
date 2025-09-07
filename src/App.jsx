@@ -77,6 +77,11 @@ function App() {
             <Route path="/table" element={<Dom2 />} />
             <Route path="/lottery" element={<Publisher />} />
             <Route path="/sports" element={<Support />} />
+            {/* Additional routes for Combo shortcuts */}
+            <Route path="/hot" element={<Slider />} />
+            <Route path="/favorites" element={<Slider />} />
+            <Route path="/poker" element={<Dom2 />} />
+            <Route path="/esports" element={<Publisher />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
