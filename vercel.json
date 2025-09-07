@@ -3,5 +3,13 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.jeetbuzzgames.com" }],
+      "destination": "https://jeetbuzzgames.com/$1",
+      "permanent": true
+    }
   ]
 }
