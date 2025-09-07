@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import './BannerSlider.css';
 
 const bannerImages = [
@@ -15,20 +15,29 @@ const bannerImages = [
 
 const BannerSlider = () => {
   const trackRef = useRef(null);
+  const [active, setActive] = useState(0);
+
+  const slideTo = useCallback((index) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const child = el.children[index];
+    if (!child) return;
+    el.scrollTo({ left: child.offsetLeft, behavior: 'smooth' });
+    setActive(index);
+  }, []);
 
   useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
-    let rafId;
-    const step = () => {
-      el.scrollLeft += 1;
-      if (el.scrollLeft + el.clientWidth >= el.scrollWidth) {
-        el.scrollLeft = 0;
-      }
-      rafId = requestAnimationFrame(step);
-    };
-    rafId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(rafId);
+    let timer = setInterval(() => {
+      setActive(prev => {
+        const next = (prev + 1) % bannerImages.length;
+        const child = el.children[next];
+        if (child) el.scrollTo({ left: child.offsetLeft, behavior: 'smooth' });
+        return next;
+      });
+    }, 3500);
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -38,6 +47,16 @@ const BannerSlider = () => {
           <div className="banner-item" key={i}>
             <img src={src} alt={`banner-${i+1}`} />
           </div>
+        ))}
+      </div>
+      <div className="banner-dots">
+        {bannerImages.map((_, i) => (
+          <button
+            key={i}
+            className={`dot ${i === active ? 'active' : ''}`}
+            onClick={() => slideTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+          />
         ))}
       </div>
     </div>
