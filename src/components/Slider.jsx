@@ -7,19 +7,23 @@ function useScrapedImages() {
     fetch('/external/downloads.json')
       .then(r => r.json())
       .then(list => {
-        // Prefer banner/slide aspect (like 690x270) by matching filename hints
-        const bannerFirst = list.filter(it => /slide|banner|banne|690x270|web_20banne/i.test(it.file));
-        const imagesAll = list.filter(it => /\.(png|jpe?g|webp|gif|avif)$/i.test(it.file));
-        const slideCandidates = [...bannerFirst, ...imagesAll];
-        // Sort by bytes ascending to avoid huge assets in slider
-        const sorted = [...slideCandidates].sort((a, b) => a.bytes - b.bytes);
+        // Use original banner images without altering sizes or cropping
+        const bannerExact = list.filter(it => /slide|banner|banne|690x270/i.test(it.file));
         const unique = [];
         const seen = new Set();
-        for (const it of sorted) {
+        for (const it of bannerExact) {
           if (seen.has(it.file)) continue;
           seen.add(it.file);
           unique.push({ id: seen.size, title: it.file.split('/').pop().split('.')[0], url: `/${it.file}` });
-          if (unique.length >= 24) break; // cap to 24 distinct items
+        }
+        // Fallback: if no banners found, include all images
+        if (unique.length === 0) {
+          const all = list.filter(it => /\.(png|jpe?g|webp|gif|avif)$/i.test(it.file));
+          for (const it of all) {
+            if (seen.has(it.file)) continue;
+            seen.add(it.file);
+            unique.push({ id: seen.size, title: it.file.split('/').pop().split('.')[0], url: `/${it.file}` });
+          }
         }
         setItems(unique);
       })
