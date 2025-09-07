@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #0a0a0a; /* nền đen */
-  padding: 20px 0;
-  gap: 50px; /* khoảng cách giữa các icon */
+  padding: 12px 8px;
+  gap: 24px; /* khoảng cách giữa các icon */
 }
 
 .combo-item {
@@ -14,16 +15,48 @@
   color: white;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  min-width: 72px;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .combo-icon {
-  font-size: 36px; /* kích thước icon */
-  margin-bottom: 8px;
+  font-size: 28px; /* kích thước icon */
+  line-height: 1;
+  margin-bottom: 6px;
 }
 
 .combo-item:hover {
   transform: scale(1.1);
   color: #1e90ff; /* màu khi hover */
+}
+
+/* Mobile first tweaks */
+@media (max-width: 480px) {
+  .combo-navbar {
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+  }
+  .combo-item {
+    min-width: 64px;
+    font-size: 12px;
+  }
+  .combo-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .combo-navbar {
+    gap: 16px;
+  }
+  .combo-item {
+    min-width: 70px;
+  }
+  .combo-icon {
+    font-size: 26px;
+  }
 }

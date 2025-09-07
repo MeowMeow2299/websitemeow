@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ScrollingText from "./components/ScrollingText";
 import Slider from "./components/Slider";
 import Dom from "./components/Dom";
@@ -24,53 +25,61 @@ function App() {
 
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
-          <img
-  src="/1.png"
-  alt="Banner"
-  style={{
-    width: '100%',
-    height: 'auto',
-    display: 'block',
-    borderRadius: '12px',
-    objectFit: 'contain'
-  }}
-/>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <img
+                    src="/1.png"
+                    alt="Banner"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      borderRadius: '12px',
+                      objectFit: 'contain'
+                    }}
+                  />
+                  <div className="bg-[#1a1a1a] min-h-screen p-4">
+                    <ScrollingText />
+                  </div>
+                  <div>
+                    <Slider />
+                  </div>
+                  <div>
+                    <Combo />
+                  </div>
+                  <div>
+                    <Dom />
+                  </div>
+                  <div>
+                    <Dom1 />
+                  </div>
+                  <div>
+                    <Dom2 />
+                  </div>
+                  <div>
+                    <Publisher />
+                  </div>
+                  <div>
+                    <Support />
+                  </div>
+                  <div>
+                    <Footer />
+                  </div>
+                </>
+              }
+            />
+            <Route path="/casino" element={<Dom />} />
+            <Route path="/slots" element={<Slider />} />
+            <Route path="/live" element={<Dom1 />} />
+            <Route path="/table" element={<Dom2 />} />
+            <Route path="/lottery" element={<Publisher />} />
+            <Route path="/sports" element={<Support />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </div>
-
-         <div className="bg-[#1a1a1a] min-h-screen p-4">
-      <ScrollingText />
-    </div>
-    <div >
-      <Slider />
-    </div>
-    <div>
-      <Combo />
-    </div>
-
-     <div>
-      <Dom />
-    </div>
-
-     <div>
-      <Dom1 />
-    </div> 
-
-    <div>
-      <Dom2 />
-    </div>
-    
-    <div>
-      <Publisher />
-    </div> 
-
-    <div>
-      <Support  />
-    </div> 
-
-    <div>
-      <Footer />
-    </div> 
-    
       </div>
     </div>
   );
