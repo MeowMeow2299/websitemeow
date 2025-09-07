@@ -7,8 +7,11 @@ function useScrapedImages() {
     fetch('/external/downloads.json')
       .then(r => r.json())
       .then(list => {
-        const slideCandidates = list.filter(it => /\.(png|jpe?g|webp|gif|avif)$/i.test(it.file));
-        // Prefer medium sized files for thumbnails
+        // Prefer banner/slide aspect (like 690x270) by matching filename hints
+        const bannerFirst = list.filter(it => /slide|banner|banne|690x270|web_20banne/i.test(it.file));
+        const imagesAll = list.filter(it => /\.(png|jpe?g|webp|gif|avif)$/i.test(it.file));
+        const slideCandidates = [...bannerFirst, ...imagesAll];
+        // Sort by bytes ascending to avoid huge assets in slider
         const sorted = [...slideCandidates].sort((a, b) => a.bytes - b.bytes);
         const unique = [];
         const seen = new Set();
