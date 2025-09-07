@@ -8,7 +8,9 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-left">
           <h1 className="logo">
-            <img src="/LOGO.png" alt="Logo" />
+            <NavLink to="/" aria-label="Home">
+              <img src="/LOGO.png" alt="Logo" />
+            </NavLink>
           </h1>
         </div>
 
