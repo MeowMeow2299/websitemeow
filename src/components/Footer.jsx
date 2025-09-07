@@ -6,9 +6,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="logo-section">
-          <img src="/photos/logo.png" alt="Logo" />
+          <img src="/LOGO.png" alt="Gamebuzz" />
           <p className="tagline">
-            A GAME STUDIO CRAFTING EXCITING, HIGH-QUALITY VIDEO GAMES, PRIORITIZING IMMERSIVE GAMEPLAY AND MECHANICS. HAC HEATBASE PLATEA
+            A GAME STUDIO CRAFTING EXCITING, HIGH-QUALITY VIDEO GAMES, PRIORITIZING IMMERSIVE GAMEPLAY AND MECHANICS.
           </p>
         </div>
 
@@ -47,21 +47,21 @@ const Footer = () => {
 
         <div className="social-download">
           <div className="social-icons">
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Tiktok"><i className="fab fa-tiktok"></i></a>
           </div>
           <div className="download-buttons">
-            <button className="google-play">Google Play</button>
-            <button className="app-store">App Store</button>
+            <button className="google-play" aria-label="Download on Google Play">Google Play</button>
+            <button className="app-store" aria-label="Download on App Store">App Store</button>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025. JET BUZZ GAMING. ALL RIGHTS RESERVED.</p>
+        <p>© 2025. GAMEBUZZ. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
   );
