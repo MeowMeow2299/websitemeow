@@ -85,11 +85,6 @@
     "bytes": 59573
   },
   {
-    "url": "https://images.5949390294.com/TCG_GAME_ICONS/JL/EN/JL0029.png",
-    "file": "external/JL0029.png",
-    "bytes": 17141
-  },
-  {
     "url": "https://images.5949390294.com/prod-images/TCG_GAME_ICONS/HOT_GAME/betbdtf5/pc/JL/BN/JL0044.png?_1751259352006",
     "file": "external/JL0044.png",
     "bytes": 812954
@@ -113,6 +108,11 @@
     "url": "https://images.5949390294.com/TCG_GAME_ICONS/PG/EN/PG0041.png",
     "file": "external/PG0041.png",
     "bytes": 22445
+  },
+  {
+    "url": "https://images.5949390294.com/TCG_GAME_ICONS/JL/EN/JL0166.png",
+    "file": "external/JL0166.png",
+    "bytes": 15716
   },
   {
     "url": "https://images.5949390294.com//TCG_PROD_IMAGES/RNG_LIST_VENDOR/U9W-COLOR.png",
@@ -1593,6 +1593,136 @@
     "url": "https://www.betbdt.vip/common/v.1.0.1/manifest/images/ui-bg_flat_0_aaaaaa_40x100.png",
     "file": "external/ui-bg_flat_0_aaaaaa_40x100.png",
     "bytes": 213
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/loader.dc1e2c66.svg",
+    "file": "external/loader.dc1e2c66.svg",
+    "bytes": 1652
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/iconinfo-m.062df726.png",
+    "file": "external/iconinfo-m.062df726.png",
+    "bytes": 22367
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/balanceInfo-icon.59cfd698.png",
+    "file": "external/balanceInfo-icon.59cfd698.png",
+    "bytes": 1201
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/mark.76996b88.png",
+    "file": "external/mark.76996b88.png",
+    "bytes": 363
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-withdraw.ce9214c6.png",
+    "file": "external/icon-withdraw.ce9214c6.png",
+    "bytes": 1197
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-deposit.fe73b0a0.png",
+    "file": "external/icon-deposit.fe73b0a0.png",
+    "bytes": 1218
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-bet.7ef1cb00.png",
+    "file": "external/icon-bet.7ef1cb00.png",
+    "bytes": 1216
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-member.61c6d94b.png",
+    "file": "external/icon-member.61c6d94b.png",
+    "bytes": 1224
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-dividend.67cabb09.png",
+    "file": "external/icon-dividend.67cabb09.png",
+    "bytes": 1124
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/datePicker.fe75591c.svg",
+    "file": "external/datePicker.fe75591c.svg",
+    "bytes": 2614
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/question-mark.d371a777.png",
+    "file": "external/question-mark.d371a777.png",
+    "bytes": 320
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/clock-icon.8059c139.png",
+    "file": "external/clock-icon.8059c139.png",
+    "bytes": 268
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/fish-bg.b2d251dc.png",
+    "file": "external/fish-bg.b2d251dc.png",
+    "bytes": 7600
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/lott-bg.fe5ef83a.png",
+    "file": "external/lott-bg.fe5ef83a.png",
+    "bytes": 6934
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/rng-bg.911dc4fc.png",
+    "file": "external/rng-bg.911dc4fc.png",
+    "bytes": 7833
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/pvp-bg.ec3d6f5f.png",
+    "file": "external/pvp-bg.ec3d6f5f.png",
+    "bytes": 11050
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/live-bg.9db8b2ab.png",
+    "file": "external/live-bg.9db8b2ab.png",
+    "bytes": 8973
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/sports-bg.78f64601.png",
+    "file": "external/sports-bg.78f64601.png",
+    "bytes": 8198
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/elott-bg.5aa71d27.png",
+    "file": "external/elott-bg.5aa71d27.png",
+    "bytes": 8043
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/cons-bg.6dba81c4.png",
+    "file": "external/cons-bg.6dba81c4.png",
+    "bytes": 7713
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/unfold.7ae5d829.png",
+    "file": "external/unfold.7ae5d829.png",
+    "bytes": 246
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/putaway.6899e4ad.png",
+    "file": "external/putaway.6899e4ad.png",
+    "bytes": 242
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/add.2fedece0.png",
+    "file": "external/add.2fedece0.png",
+    "bytes": 143
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/sub.fee81a64.png",
+    "file": "external/sub.fee81a64.png",
+    "bytes": 104
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/images/add.png",
+    "file": "external/add.png",
+    "bytes": 143
+  },
+  {
+    "url": "https://www.betbdt.vip/ac/v.1.0.1/images/sub.png",
+    "file": "external/sub.png",
+    "bytes": 104
   },
   {
     "url": "https://www.betbdt.vip/mc/v.1.0.1/manifest/images/himt.e05f5f71.png",
@@ -3268,135 +3398,5 @@
     "url": "https://www.betbdt.vip/mc/v.1.0.1/manifest/images/dei-icon-list.5a79fc6c.png",
     "file": "external/dei-icon-list.5a79fc6c.png",
     "bytes": 546
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/loader.dc1e2c66.svg",
-    "file": "external/loader.dc1e2c66.svg",
-    "bytes": 1652
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/iconinfo-m.062df726.png",
-    "file": "external/iconinfo-m.062df726.png",
-    "bytes": 22367
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/balanceInfo-icon.59cfd698.png",
-    "file": "external/balanceInfo-icon.59cfd698.png",
-    "bytes": 1201
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/mark.76996b88.png",
-    "file": "external/mark.76996b88.png",
-    "bytes": 363
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-withdraw.ce9214c6.png",
-    "file": "external/icon-withdraw.ce9214c6.png",
-    "bytes": 1197
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-deposit.fe73b0a0.png",
-    "file": "external/icon-deposit.fe73b0a0.png",
-    "bytes": 1218
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-bet.7ef1cb00.png",
-    "file": "external/icon-bet.7ef1cb00.png",
-    "bytes": 1216
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-member.61c6d94b.png",
-    "file": "external/icon-member.61c6d94b.png",
-    "bytes": 1224
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/icon-dividend.67cabb09.png",
-    "file": "external/icon-dividend.67cabb09.png",
-    "bytes": 1124
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/datePicker.fe75591c.svg",
-    "file": "external/datePicker.fe75591c.svg",
-    "bytes": 2614
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/question-mark.d371a777.png",
-    "file": "external/question-mark.d371a777.png",
-    "bytes": 320
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/clock-icon.8059c139.png",
-    "file": "external/clock-icon.8059c139.png",
-    "bytes": 268
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/fish-bg.b2d251dc.png",
-    "file": "external/fish-bg.b2d251dc.png",
-    "bytes": 7600
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/lott-bg.fe5ef83a.png",
-    "file": "external/lott-bg.fe5ef83a.png",
-    "bytes": 6934
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/rng-bg.911dc4fc.png",
-    "file": "external/rng-bg.911dc4fc.png",
-    "bytes": 7833
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/pvp-bg.ec3d6f5f.png",
-    "file": "external/pvp-bg.ec3d6f5f.png",
-    "bytes": 11050
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/live-bg.9db8b2ab.png",
-    "file": "external/live-bg.9db8b2ab.png",
-    "bytes": 8973
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/sports-bg.78f64601.png",
-    "file": "external/sports-bg.78f64601.png",
-    "bytes": 8198
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/elott-bg.5aa71d27.png",
-    "file": "external/elott-bg.5aa71d27.png",
-    "bytes": 8043
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/cons-bg.6dba81c4.png",
-    "file": "external/cons-bg.6dba81c4.png",
-    "bytes": 7713
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/unfold.7ae5d829.png",
-    "file": "external/unfold.7ae5d829.png",
-    "bytes": 246
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/putaway.6899e4ad.png",
-    "file": "external/putaway.6899e4ad.png",
-    "bytes": 242
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/add.2fedece0.png",
-    "file": "external/add.2fedece0.png",
-    "bytes": 143
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/manifest/images/sub.fee81a64.png",
-    "file": "external/sub.fee81a64.png",
-    "bytes": 104
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/images/add.png",
-    "file": "external/add.png",
-    "bytes": 143
-  },
-  {
-    "url": "https://www.betbdt.vip/ac/v.1.0.1/images/sub.png",
-    "file": "external/sub.png",
-    "bytes": 104
   }
 ]
