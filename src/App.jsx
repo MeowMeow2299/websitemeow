@@ -16,6 +16,7 @@ import SignUp from "./components/SignUp";
 import Register from "./components/Register";
 import ContentSnapshot from "./components/ContentSnapshot";
 import BannerSlider from "./components/BannerSlider";
+import ContainerSection from "./components/ContainerSection";
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           <BannerSlider />
           <div className="mt-4">
             <ScrollingText />
+          </div>
+          <div className="mt-4">
+            <ContainerSection imageUrl="/external/Group-26-1.png" />
           </div>
           <Routes>
             <Route path="/" element={<ContentSnapshot />} />
