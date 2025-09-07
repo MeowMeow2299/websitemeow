@@ -15,6 +15,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Register from "./components/Register";
 import ContentSnapshot from "./components/ContentSnapshot";
+import ContentSnapshot from "./components/ContentSnapshot";
 
 
 function App() {
@@ -29,53 +30,8 @@ function App() {
 
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
-          <div className="main-content-scaled">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <img
-                    src="/1.png"
-                    alt="Banner"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      display: 'block',
-                      borderRadius: '12px',
-                      objectFit: 'contain'
-                    }}
-                  />
-                  <div className="bg-[#1a1a1a] min-h-screen p-4 fade-in">
-                    <ScrollingText />
-                  </div>
-                  <div className="fade-in">
-                    <Slider />
-                  </div>
-                  <div className="fade-in">
-                    <Combo />
-                  </div>
-                  <div className="fade-in">
-                    <Dom />
-                  </div>
-                  <div className="fade-in">
-                    <Dom1 />
-                  </div>
-                  <div className="fade-in">
-                    <Dom2 />
-                  </div>
-                  <div className="fade-in">
-                    <Publisher />
-                  </div>
-                  <div className="fade-in">
-                    <Support />
-                  </div>
-                  <div className="fade-in">
-                    <Footer />
-                  </div>
-                </>
-              }
-            />
+            <Route path="/" element={<ContentSnapshot />} />
             <Route path="/casino" element={<Dom />} />
             <Route path="/slots" element={<Slider />} />
             <Route path="/live" element={<Dom1 />} />
@@ -94,7 +50,6 @@ function App() {
             <Route path="/snapshot" element={<ContentSnapshot />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-          </div>
         </div>
       </div>
     </div>

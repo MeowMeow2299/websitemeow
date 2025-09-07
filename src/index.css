@@ -21,10 +21,7 @@ h1 {
 }
 
 /* Scale only main content area by 110% while keeping navbar and sidebar intact */
-.main-content-scaled {
-  transform: scale(1.1);
-  transform-origin: top left;
-}
+/* Removed main-content scaling to keep Navbar/Sidebar unaffected */
 
 /* Simple fade-in animation for primary sections */
 @keyframes fadeInUp {
