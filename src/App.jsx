@@ -13,6 +13,7 @@ import Support from "./components/Support";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Register from "./components/Register";
 
 
 function App() {
@@ -87,6 +88,7 @@ function App() {
             {/* Auth */}
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

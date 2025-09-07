@@ -45,6 +45,10 @@
   background-image: url('/1.png');
 }
 
+.register-bg::before {
+  background-image: url('/2.png');
+}
+
 .auth-card {
   width: 100%;
   max-width: 420px;
