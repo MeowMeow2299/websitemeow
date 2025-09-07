@@ -46,7 +46,8 @@
 .scroll-stage {
   position: relative;
   width: 100%;
-  height: 28px;
+  height: 32px;
+  line-height: 32px;
 }
 
 .scroll-strip {
@@ -70,6 +71,24 @@
   color: #FFFFFF;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 0 8px rgba(255,255,255,0.18);
+}
+
+:root {
+  --marquee-duration: 22s;
+}
+
+.scroll-strip {
+  animation-duration: var(--marquee-duration);
+}
+.scroll-strip-dup {
+  animation-delay: calc(var(--marquee-duration) / 2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-strip, .scroll-strip-dup, .scroll-shine {
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
 @keyframes strip-ltr {
