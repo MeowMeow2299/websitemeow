@@ -30,6 +30,7 @@ function App() {
 
         {/* Nội dung */}
         <div className="flex-1 bg-black text-white p-6">
+          <ScrollingText />
           <BannerSlider />
           <Routes>
             <Route path="/" element={<ContentSnapshot />} />
