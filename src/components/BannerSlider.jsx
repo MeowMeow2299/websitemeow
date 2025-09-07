@@ -49,14 +49,16 @@ const BannerSlider = () => {
           </div>
         ))}
       </div>
-      <div className="banner-dots">
+      <div className="banner-pagination">
         {bannerImages.map((_, i) => (
           <button
             key={i}
-            className={`dot ${i === active ? 'active' : ''}`}
+            className={`page-btn ${i === active ? 'active' : ''}`}
             onClick={() => slideTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
+            aria-label={`Chuyển tới ảnh ${i + 1}`}
+          >
+            {i + 1}
+          </button>
         ))}
       </div>
     </div>
